@@ -13,7 +13,7 @@ export default class Snake{
         this.#y = y ; 
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
-        this.#image = imgSrc ;
+        this.#image = this.#createImage(imgSrc) ;
     }
 
     get x(){
@@ -60,25 +60,25 @@ export default class Snake{
         this.#deltaY = value ; 
     }
 
-    // setImage(newImgSrc){
-    //     this.#image = this.#createImage(newImgSrc) ;
-    // }
+    setImage(newImgSrc){
+        this.#image = this.#createImage(newImgSrc) ;
+    }
 
-    // #createImage(imageSource) {
-	//     const newImg = new Image();
-  	//     newImg.src = imageSource;
-  	//     return newImg;
-    // }
+    #createImage(imageSource) {
+	    const newImg = new Image();
+  	    newImg.src = imageSource;
+  	    return newImg;
+    }
 
 
-    // draw(context){
-    //     context.drawImage(this.#image, this.#x, this.#y);
-    // }
+    draw(context){
+        context.drawImage(this.#image, this.#x, this.#y);
+    }
 
-    // move(canvas){
-    //     this.#x += this.#deltaX;
-    //     this.#y += this.#deltaY;
-    // }
+    move(canvas){
+        this.#x += this.#deltaX;
+        this.#y += this.#deltaY;
+    }
 
     // collisionWith(obstacle){
     
