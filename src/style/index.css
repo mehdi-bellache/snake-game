@@ -1,0 +1,14 @@
+*{
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#playfield{
+    display : block;
+    margin : 20px auto;
+    background-image: url("../images/decor.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+
+}
