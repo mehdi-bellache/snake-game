@@ -1,5 +1,5 @@
 
-import imgSrc from '../assets/snake.png' ;
+import imgSrc from '../assets/images/snake.png' ;
 
 export default class Snake{
     #x ;
@@ -79,22 +79,5 @@ export default class Snake{
         this.#x += this.#deltaX;
         this.#y += this.#deltaY;
     }
-
-    // collisionWith(obstacle){
-    
-    //     const P1_X = Math.max(this.#x, obstacle.#x);
-    //     const P1_Y = Math.max(this.#y, obstacle.#y) ;
-
-    //     const A2_X = this.#x + this.#image.width ;
-    //     const A2_Y = this.#y + this.#image.height ; 
-    
-    //     const P2_X = Math.min(A2_X, obstacle.#x + obstacle.#image.width);
-    //     const P2_Y = Math.min(A2_Y, obstacle.#y + obstacle.#image.height);
-
-    //     return ((P1_X < P2_X) && (P1_Y < P2_Y)) ? true : false ; 
-    
-    // }
-
-    // alea(n){ return Math.floor(Math.random()* n) ; }
 
 }

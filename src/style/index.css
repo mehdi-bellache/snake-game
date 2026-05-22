@@ -10,5 +10,6 @@
     background-image: url("../images/decor.jpg");
     background-repeat: repeat-x;
     background-size: cover;
+    background-position : 0px 0px;
 
 }
