@@ -76,10 +76,13 @@ export default class Snake{
   	//     return newImg;
     // }
 
+    addSegment(segment){
+        this.#segments.push(segment) ;
+    }
+
 
     draw(context){
         context.fillStyle = "#87CEEB";
-        context.fillRect(40, 200, 100, 100);
         this.#segments.forEach(segment => context.fillRect(segment.x, segment.y, 20, 20));
     }
 
