@@ -1,12 +1,9 @@
 
-// import imgSrc from './assets/images/snake.png' ;
-
 export default class Snake{
     #x ;
     #y ;
     #deltaX ;
     #deltaY ;
-    //#image ;
     #segments ; 
 
     constructor(x, y, deltaX= 0, deltaY = 0){
@@ -14,7 +11,6 @@ export default class Snake{
         this.#y = y ; 
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
-        // this.#image = this.#createImage(imgSrc) ;
         this.#segments = [] ;
     }
 
@@ -38,18 +34,6 @@ export default class Snake{
         return this.#segments ;
     }
 
-    // get image(){
-    //     return this.#image ;
-    // }
-
-    // get width() {
-    //     return this.#image.width ;
-    // }
-
-    // get height() {
-    //     return this.#image.height ;
-    // }
-
     setX(value){
         this.#x = value ;
     }
@@ -66,18 +50,24 @@ export default class Snake{
         this.#deltaY = value ; 
     }
 
-    // setImage(newImgSrc){
-    //     this.#image = this.#createImage(newImgSrc) ;
-    // }
-
-    // #createImage(imageSource) {
-	//     const newImg = new Image();
-  	//     newImg.src = imageSource;
-  	//     return newImg;
-    // }
-
     addSegment(segment){
         this.#segments.push(segment) ;
+    }
+
+    moveUp(){
+        this.setDeltaY(-10)  ;
+    }
+
+    moveDown(){
+        this.setDeltaY(+10) ;
+    } 
+
+    moveLeft(){
+        this.setDeltaX(-10) ;
+    }
+
+    moveRight(){
+        this.setDeltaX(+10) ;
     }
 
 

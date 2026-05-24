@@ -34,6 +34,70 @@ export default class Game {
         return this.#requeteAnimation;
     }
 
+    // keyDownActionHandler(event) {
+    //     switch (event.key) {
+    //         case "ArrowLeft":
+    //         case "Left":
+    //             this.#player.setMoving("left");
+    //             break;
+    //         case "ArrowRight" :
+    //         case "Right" :
+    //             this.#player.setMoving("right");
+    //             break;
+    //         case "ArrowUp" :
+    //         case "Up":
+    //             this.#player.setMoving("up");
+    //             break;        
+    //         case "ArrowDown" :
+    //         case "Down":
+    //             this.#player.setMoving("down");
+    //             break;
+    //         default: return;
+    //     }
+    //     event.preventDefault();
+    
+    // }
+
+    // keyUpActionHandler(event) {
+    //     switch (event.key) {
+    //         case "ArrowLeft":
+    //         case "Left":
+    //             this.#player.setMoving(null);
+    //             this.#player.stopMoving() ;
+    //             break;
+    //         case "ArrowRight" :
+    //         case "Right" :
+    //             this.#player.setMoving(null);
+    //             this.#player.stopMoving() ;
+    //             break;
+    //         case "ArrowUp" :
+    //         case "Up":
+    //             this.#player.setMoving(null);
+    //             this.#player.stopMoving() ;
+    //             break;        
+    //         case "ArrowDown" :
+    //         case "Down":
+    //             this.#player.setMoving(null);
+    //             this.#player.stopMoving() ;
+    //             break;
+    //         default: return;
+    //     }
+    //     event.preventDefault();
+    // }
+
+
+    // handleMoveKeys() {
+    //     if (this.#player.moving === 'left')
+    //         this.#player.moveLeft();
+    //     if (this.#player.moving === 'right')
+    //         this.#player.moveRight();
+    //     if(this.#player.moving === 'up')
+    //         this.#player.moveUp();
+    //     if(this.#player.moving === 'down')
+    //         this.#player.moveDown();    
+    // }
+
+
 
     animate = () => {
 
