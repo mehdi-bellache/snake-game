@@ -1,19 +1,21 @@
 
-import imgSrc from './assets/images/snake.png' ;
+// import imgSrc from './assets/images/snake.png' ;
 
 export default class Snake{
     #x ;
     #y ;
     #deltaX ;
     #deltaY ;
-    #image ;
+    //#image ;
+    #segements ; 
 
     constructor(x, y, deltaX= 0, deltaY = 0){
         this.#x = x ;
         this.#y = y ; 
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
-        this.#image = this.#createImage(imgSrc) ;
+        // this.#image = this.#createImage(imgSrc) ;
+        this.#segements = [] ;
     }
 
     get x(){
@@ -30,6 +32,10 @@ export default class Snake{
 
     get deltaY(){
         return this.#deltaY ;
+    }
+
+    get segements(){
+        return this.#segements ;
     }
 
     get image(){
