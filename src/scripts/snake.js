@@ -7,7 +7,7 @@ export default class Snake{
     #deltaX ;
     #deltaY ;
     //#image ;
-    #segements ; 
+    #segments ; 
 
     constructor(x, y, deltaX= 0, deltaY = 0){
         this.#x = x ;
@@ -15,7 +15,7 @@ export default class Snake{
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
         // this.#image = this.#createImage(imgSrc) ;
-        this.#segements = [] ;
+        this.#segments = [] ;
     }
 
     get x(){
@@ -34,21 +34,21 @@ export default class Snake{
         return this.#deltaY ;
     }
 
-    get segements(){
-        return this.#segements ;
+    get segments(){
+        return this.#segments ;
     }
 
-    get image(){
-        return this.#image ;
-    }
+    // get image(){
+    //     return this.#image ;
+    // }
 
-    get width() {
-        return this.#image.width ;
-    }
+    // get width() {
+    //     return this.#image.width ;
+    // }
 
-    get height() {
-        return this.#image.height ;
-    }
+    // get height() {
+    //     return this.#image.height ;
+    // }
 
     setX(value){
         this.#x = value ;
@@ -66,24 +66,26 @@ export default class Snake{
         this.#deltaY = value ; 
     }
 
-    setImage(newImgSrc){
-        this.#image = this.#createImage(newImgSrc) ;
-    }
+    // setImage(newImgSrc){
+    //     this.#image = this.#createImage(newImgSrc) ;
+    // }
 
-    #createImage(imageSource) {
-	    const newImg = new Image();
-  	    newImg.src = imageSource;
-  	    return newImg;
-    }
+    // #createImage(imageSource) {
+	//     const newImg = new Image();
+  	//     newImg.src = imageSource;
+  	//     return newImg;
+    // }
 
 
     draw(context){
-        context.drawImage(this.#image, this.#x, this.#y);
+        context.fillStyle = "#87CEEB";
+        context.fillRect(40, 200, 100, 100);
+        this.#segments.forEach(segment => context.fillRect(segment.x, segment.y, 20, 20));
     }
 
-    move(canvas){
-        this.#x += this.#deltaX;
-        this.#y += this.#deltaY;
-    }
+    // move(canvas){
+    //     this.#x += this.#deltaX;
+    //     this.#y += this.#deltaY;
+    // }
 
 }
