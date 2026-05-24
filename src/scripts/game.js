@@ -1,5 +1,7 @@
 
 import Snake from "./snake.js";
+import Segment from "./segment.js";
+
 
 export default class Game {
 
@@ -39,7 +41,7 @@ export default class Game {
 
         // this.#player.move(this.#canvas) ;
 
-        this.#player.addSegment();
+        this.#player.addSegment(new Segment(10, 10));
 
         this.#player.draw(this.#context) ;
 
