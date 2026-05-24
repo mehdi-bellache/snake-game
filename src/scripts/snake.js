@@ -76,9 +76,12 @@ export default class Snake{
         this.#segments.forEach(segment => context.fillRect(segment.x, segment.y, 20, 20));
     }
 
-    // move(canvas){
-    //     this.#x += this.#deltaX;
-    //     this.#y += this.#deltaY;
-    // }
+    move(canvas){
+        this.#x += this.#deltaX;
+        this.#y += this.#deltaY;
+        this.#segments.forEach( segment => {
+            segment.x += this.#deltaX;
+            segment.y += this.#deltaY ; });
+    }
 
 }
