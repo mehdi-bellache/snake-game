@@ -1,5 +1,5 @@
 
-import imgSrc from '../assets/images/snake.png' ;
+import imgSrc from '../assests/images/snake2.png' ;
 
 export default class Snake{
     #x ;
