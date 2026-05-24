@@ -63,7 +63,6 @@ module.exports = {
 
    plugins: [
       new webpack.ProgressPlugin(),
-      new FaviconsWebpackPlugin('src/favicon.ico'),
       new HtmlWebpackPlugin({
          template: path.resolve(__dirname, 'src', 'index.html'),
          filename: './index.html',
