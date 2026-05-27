@@ -94,7 +94,7 @@ export default class Game {
     //     if(this.#player.moving === 'up')
     //         this.#player.moveUp();
     //     if(this.#player.moving === 'down')
-    //         this.#player.moveDown();    
+    //         this.#player.moveDown();
     // }
 
 
@@ -109,8 +109,6 @@ export default class Game {
 
         this.#player.draw(this.#context) ;
 
-
-        // this.#player.manageLives() ; a player does have life but it's just 1.
 
         this.#requeteAnimation = window.requestAnimationFrame(this.animate);
         

@@ -4,7 +4,8 @@ export default class Snake{
     #y ;
     #deltaX ;
     #deltaY ;
-    #segments ; 
+    #segments ;
+    #moving ; 
 
     constructor(x, y, deltaX= 0, deltaY = 0){
         this.#x = x ;
@@ -12,32 +13,39 @@ export default class Snake{
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
         this.#segments = [] ;
+        this.#moving =  null ;
     }
 
+    
+    
     get x(){
         return this.#x ;
     }
-
+    
     get y(){
         return this.#y ;
     }
-
+    
     get deltaX(){
         return this.#deltaX ;
     }
-
+    
     get deltaY(){
         return this.#deltaY ;
     }
-
+    
     get segments(){
         return this.#segments ;
     }
-
+    
+    get moving(){
+        return this.#moving ;
+    }
+    
     setX(value){
         this.#x = value ;
     }
-
+    
     setY(value){
         this.#y = value ;
     }
@@ -45,9 +53,13 @@ export default class Snake{
     setDeltaX(value){
         this.#deltaX = value ; 
     }
-
+    
     setDeltaY(value){
         this.#deltaY = value ; 
+    }
+
+    setMoving(moving){
+        this.#moving = moving ;
     }
 
     addSegment(segment){
@@ -76,12 +88,19 @@ export default class Snake{
         this.#segments.forEach(segment => context.fillRect(segment.x, segment.y, 20, 20));
     }
 
-    move(canvas){
-        this.#x += this.#deltaX;
-        this.#y += this.#deltaY;
-        this.#segments.forEach( segment => {
-            segment.x += this.#deltaX;
-            segment.y += this.#deltaY ; });
-    }
+    // that's not correct.
+    // because if the snake goes down just the head will go down but the last parts will move normally not down.
+    
+    // basic version just to test if the snake moves :
+
+
+
+    // move(canvas){
+    //     this.#x += this.#deltaX;
+    //     this.#y += this.#deltaY;
+    //     this.#segments.forEach( segment => {
+    //         segment.x += this.#deltaX;
+    //         segment.y += this.#deltaY ; });
+    // }
 
 }
