@@ -1,15 +1,11 @@
 
 export default class Snake{
-    #x ;
-    #y ;
     #deltaX ;
     #deltaY ;
     #segments ;
     #moving ; 
 
-    constructor(x, y, deltaX= 0, deltaY = 0){
-        this.#x = x ;
-        this.#y = y ; 
+    constructor(deltaX= 0, deltaY = 0){
         this.#deltaX = deltaX ;
         this.#deltaY = deltaY ;
         this.#segments = [] ;
@@ -17,14 +13,6 @@ export default class Snake{
     }
 
     
-    
-    get x(){
-        return this.#x ;
-    }
-    
-    get y(){
-        return this.#y ;
-    }
     
     get deltaX(){
         return this.#deltaX ;
@@ -93,13 +81,23 @@ export default class Snake{
     
     // basic version just to test if the snake moves :
 
-    move(box){
+    // this version is incorrect, because of this.width and box.width.
+    // move(box){
+    //     this.setX( Math.max(0, Math.min(box.width - this.width, this.#x + this.#deltaX))) ;
+    //     this.setY( Math.max(0, Math.min(box.height - this.height, this.#y + this.#deltaY))) ;
+    // }
 
-        this.setX(
-            Math.max(0, Math.min(box.width - this.width, this.x + this.deltaX))) ;
+    move(canvas) {
+        const prevX = this.#x;
+        const prevY = this.#y;
 
-        this.setY(
-            Math.max(0, Math.min(box.height - this.height, this.y + this.deltaY))) ;
+        this.#x += this.#deltaX;
+        this.#y += this.#deltaY;
+
+        if (this.#segments.length > 0) {
+            this.#segments[0].x = prevX;
+            this.#segments[0].y = prevY;
+        }
     }
 
 
