@@ -78,8 +78,8 @@ export default class Snake{
     // segments[0] is the head.
 
     move(){
-        this.#segments[0].x += this.#deltaX ;
-        this.#segments[0].y += this.#deltaY ;
+        this.#segments[0].setX(this.#segments[0].x +  this.#deltaX ) ;
+        this.#segments[0].setY(this.#segments[0].y +  this.#deltaY ) ;
     }
 
 }
