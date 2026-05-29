@@ -16,4 +16,12 @@ export default class Segment{
     get y(){
         return this.#y ;
     }
+
+    setX(x){
+        this.#x = x ;
+    }
+
+    setY(y){
+        this.#y = y ;
+    }
 }

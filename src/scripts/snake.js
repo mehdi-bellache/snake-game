@@ -65,7 +65,8 @@ export default class Snake{
 
 
     draw(context){
-        context.fillStyle = "#87CEEB";
+        // context.fillStyle = "#87CEEB";
+        context.fillStyle = "#000";
         this.#segments.forEach(segment => context.fillRect(segment.x, segment.y, 20, 20));
     }
 

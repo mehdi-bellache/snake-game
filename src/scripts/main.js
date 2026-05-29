@@ -8,6 +8,8 @@ const init = () => {
    const game = new Game(canvas);
 
    game.animate() ;
+
+   window.addEventListener('keydown', game.keyDownActionHandler.bind(game)) ;
 }
 
 init();

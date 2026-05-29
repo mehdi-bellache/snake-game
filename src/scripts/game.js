@@ -1,6 +1,6 @@
 
 import Snake from "./snake.js";
-import Segment from "./segment.js";
+// import Segment from "./segment.js";
 
 
 export default class Game {
@@ -103,10 +103,11 @@ export default class Game {
 
         this.#context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
 
+        this.handleMoveKeys() ;
+
         this.#player.move() ;
 
         this.#player.draw(this.#context) ;
-
 
         this.#requeteAnimation = window.requestAnimationFrame(this.animate);
         
