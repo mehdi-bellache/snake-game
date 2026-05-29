@@ -36,13 +36,6 @@ export default class Snake{
         return this.#moving ;
     }
     
-    setX(value){
-        this.#x = value ;
-    }
-    
-    setY(value){
-        this.#y = value ;
-    }
 
     setDeltaX(value){
         this.#deltaX = value ; 
