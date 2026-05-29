@@ -77,6 +77,9 @@ export default class Snake{
     // notre head est toujours le premier element de segments.
     // segments[0] is the head.
 
+
+    // next thing that should be added is that the snake shouldn't get out of the canvas width and height. 
+
     move(){
         this.#segments[0].setX(this.#segments[0].x +  this.#deltaX ) ;
         this.#segments[0].setY(this.#segments[0].y +  this.#deltaY ) ;
