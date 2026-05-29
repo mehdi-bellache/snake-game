@@ -93,6 +93,15 @@ export default class Snake{
     
     // basic version just to test if the snake moves :
 
+    move(box){
+
+        this.setX(
+            Math.max(0, Math.min(box.width - this.width, this.x + this.deltaX))) ;
+
+        this.setY(
+            Math.max(0, Math.min(box.height - this.height, this.y + this.deltaY))) ;
+    }
+
 
 
     // move(canvas){
