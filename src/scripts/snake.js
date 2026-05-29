@@ -12,13 +12,8 @@ export default class Snake{
         this.#deltaY = deltaY ;
         this.#segments = [] ;
         this.#moving =  null ;
-
         this.#segments.push(new Segment(20, 20));
     }
-    
-
-
-    
     
     get deltaX(){
         return this.#deltaX ;
@@ -35,7 +30,6 @@ export default class Snake{
     get moving(){
         return this.#moving ;
     }
-    
 
     setDeltaX(value){
         this.#deltaX = value ; 
@@ -79,34 +73,12 @@ export default class Snake{
     // because if the snake goes down just the head will go down but the last parts will move normally not down.
     
     // basic version just to test if the snake moves :
+    // notre head est toujours le premier element de segments.
+    // segments[0] is the head.
 
-    // this version is incorrect, because of this.width and box.width.
-    // move(box){
-    //     this.setX( Math.max(0, Math.min(box.width - this.width, this.#x + this.#deltaX))) ;
-    //     this.setY( Math.max(0, Math.min(box.height - this.height, this.#y + this.#deltaY))) ;
-    // }
-
-    move(canvas) {
-        const prevX = this.#x;
-        const prevY = this.#y;
-
-        this.#x += this.#deltaX;
-        this.#y += this.#deltaY;
-
-        if (this.#segments.length > 0) {
-            this.#segments[0].x = prevX;
-            this.#segments[0].y = prevY;
-        }
+    move(){
+        this.#segments[0].x += this.#deltaX ;
+        this.#segments[0].y += this.#deltaY ;
     }
-
-
-
-    // move(canvas){
-    //     this.#x += this.#deltaX;
-    //     this.#y += this.#deltaY;
-    //     this.#segments.forEach( segment => {
-    //         segment.x += this.#deltaX;
-    //         segment.y += this.#deltaY ; });
-    // }
 
 }
