@@ -57,14 +57,25 @@ export default class Game {
     }
 
     handleMoveKeys() {
-        if (this.#player.moving === 'left')
+        if (this.#player.moving === 'left'){
             this.#player.moveLeft();
-        if (this.#player.moving === 'right')
+            this.#player.setDeltaY(0);
+            
+        }
+        if (this.#player.moving === 'right'){
             this.#player.moveRight();
-        if(this.#player.moving === 'up')
+            this.#player.setDeltaY(0);
+        }
+        if(this.#player.moving === 'up'){
             this.#player.moveUp();
-        if(this.#player.moving === 'down')
+            this.#player.setDeltaX(0);
+            
+        }
+        if(this.#player.moving === 'down'){
             this.#player.moveDown();
+            this.#player.setDeltaX(0);
+
+        }
     }
 
 
