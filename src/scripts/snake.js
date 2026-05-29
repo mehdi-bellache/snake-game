@@ -80,9 +80,14 @@ export default class Snake{
 
     // next thing that should be added is that the snake shouldn't get out of the canvas width and height. 
 
-    move(){
-        this.#segments[0].setX(this.#segments[0].x +  this.#deltaX ) ;
-        this.#segments[0].setY(this.#segments[0].y +  this.#deltaY ) ;
+
+    move(canvas) {
+        const totalX = this.#segments[0].x + this.#deltaX;
+        const totalY = this.#segments[0].y + this.#deltaY;
+
+        this.#segments[0].setX(Math.max(0, Math.min(canvas.width - 20, totalX)));
+        this.#segments[0].setY(Math.max(0, Math.min(canvas.height - 20, totalY)));
     }
+
 
 }

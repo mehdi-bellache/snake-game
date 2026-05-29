@@ -86,7 +86,7 @@ export default class Game {
 
         this.handleMoveKeys() ;
 
-        this.#player.move() ;
+        this.#player.move(this.#canvas) ;
 
         this.#player.draw(this.#context) ;
 
