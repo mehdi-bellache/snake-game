@@ -1,7 +1,5 @@
 
 import Snake from "./snake.js";
-// import Segment from "./segment.js";
-
 
 export default class Game {
 
@@ -57,34 +55,6 @@ export default class Game {
         event.preventDefault();
     
     }
-
-    // keyUpActionHandler(event) {
-    //     switch (event.key) {
-    //         case "ArrowLeft":
-    //         case "Left":
-    //             this.#player.setMoving(null);
-    //             this.#player.stopMoving() ;
-    //             break;
-    //         case "ArrowRight" :
-    //         case "Right" :
-    //             this.#player.setMoving(null);
-    //             this.#player.stopMoving() ;
-    //             break;
-    //         case "ArrowUp" :
-    //         case "Up":
-    //             this.#player.setMoving(null);
-    //             this.#player.stopMoving() ;
-    //             break;        
-    //         case "ArrowDown" :
-    //         case "Down":
-    //             this.#player.setMoving(null);
-    //             this.#player.stopMoving() ;
-    //             break;
-    //         default: return;
-    //     }
-    //     event.preventDefault();
-    // }
-
 
     handleMoveKeys() {
         if (this.#player.moving === 'left')
