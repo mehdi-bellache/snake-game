@@ -14,7 +14,7 @@ export default class Game {
     constructor(canvas) {
         this.#canvas = canvas;
         this.#context = this.#canvas.getContext("2d") ;
-        this.#player = new Snake(30, 100) ; // better not to use numbers.
+        this.#player = new Snake() ;
         this.#requeteAnimation = null ;
     }
 
@@ -104,8 +104,6 @@ export default class Game {
         this.#context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
 
         // this.#player.move(this.#canvas) ;
-
-        this.#player.addSegment(new Segment(10, 10));
 
         this.#player.draw(this.#context) ;
 

@@ -1,4 +1,6 @@
 
+import Segment from './segment.js' ;  
+
 export default class Snake{
     #deltaX ;
     #deltaY ;
@@ -10,7 +12,11 @@ export default class Snake{
         this.#deltaY = deltaY ;
         this.#segments = [] ;
         this.#moving =  null ;
+
+        this.#segments.push(new Segment(20, 20));
     }
+    
+
 
     
     
