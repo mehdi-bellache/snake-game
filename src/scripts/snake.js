@@ -48,19 +48,19 @@ export default class Snake{
     }
 
     moveUp(){
-        this.setDeltaY(-10)  ;
+        this.setDeltaY(-5)  ;
     }
 
     moveDown(){
-        this.setDeltaY(+10) ;
+        this.setDeltaY(+5) ;
     } 
 
     moveLeft(){
-        this.setDeltaX(-10) ;
+        this.setDeltaX(-5) ;
     }
 
     moveRight(){
-        this.setDeltaX(+10) ;
+        this.setDeltaX(+5) ;
     }
 
 
