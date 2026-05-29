@@ -34,29 +34,29 @@ export default class Game {
         return this.#requeteAnimation;
     }
 
-    // keyDownActionHandler(event) {
-    //     switch (event.key) {
-    //         case "ArrowLeft":
-    //         case "Left":
-    //             this.#player.setMoving("left");
-    //             break;
-    //         case "ArrowRight" :
-    //         case "Right" :
-    //             this.#player.setMoving("right");
-    //             break;
-    //         case "ArrowUp" :
-    //         case "Up":
-    //             this.#player.setMoving("up");
-    //             break;        
-    //         case "ArrowDown" :
-    //         case "Down":
-    //             this.#player.setMoving("down");
-    //             break;
-    //         default: return;
-    //     }
-    //     event.preventDefault();
+    keyDownActionHandler(event) {
+        switch (event.key) {
+            case "ArrowLeft":
+            case "Left":
+                this.#player.setMoving("left");
+                break;
+            case "ArrowRight" :
+            case "Right" :
+                this.#player.setMoving("right");
+                break;
+            case "ArrowUp" :
+            case "Up":
+                this.#player.setMoving("up");
+                break;        
+            case "ArrowDown" :
+            case "Down":
+                this.#player.setMoving("down");
+                break;
+            default: return;
+        }
+        event.preventDefault();
     
-    // }
+    }
 
     // keyUpActionHandler(event) {
     //     switch (event.key) {
@@ -103,7 +103,7 @@ export default class Game {
 
         this.#context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
 
-        // this.#player.move(this.#canvas) ;
+        this.#player.move() ;
 
         this.#player.draw(this.#context) ;
 
